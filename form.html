@@ -1,0 +1,42 @@
+<style>
+  footer .mistake_info{
+    border: 1px solid silver;
+    padding: 15px;
+    width: 100%;
+    border-radius:4px;
+    font-size: 13px;
+    background-color: #fff;
+    /*min-height: 50px;*/
+  }
+  footer .mistake_info strong{
+    color:red;
+  }
+</style>
+<div class="modal fade bs-example-modal-sm" id="Mistake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="exampleModalLabel">Отправить ошибку</h4>
+      </div>
+      <div class="modal-body">
+        <form id="mistake-form" method="post">
+          <div class="form-group">
+            <label for="mistake_string" class="control-label">Строка с ошибкой :</label>
+            <div class="mistake_info" id="mistake_string_arrea"></div>
+          </div>
+          <div class="form-group">
+            <label for="mistake_message" class="control-label">Сообщение:</label>
+            <textarea class="form-control" id="mistake_message" name="mistake_message" rows="4"></textarea>
+          </div>
+          <input type="text" hidden id="mistake_string" name="mistake_string" title="">
+          <input type="text" hidden id="mistake_full_text" name="mistake_full_text" title="">
+          <input type="text" hidden name="mistake_fu_bots"  value="" title="">
+          <div class="modal-footer">
+            <button type="submit"  class="btn btn-primary">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
